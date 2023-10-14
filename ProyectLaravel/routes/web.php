@@ -2,6 +2,43 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\diarioController;
+ 
+Route::get('/', [diarioController::class,'metodoInicio'])->name('apodoinicio');
+
+Route::get('/form', [diarioController::class,'metodoFormulario'])->name('apodoform');
+
+Route::get('/recuer', [diarioController::class,'metodoRecuerdos'])->name('apodorecuerdos');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +62,6 @@ Route::get('/recuer', function () {
 });*/
 
 #RUTAS TIPO VIEW
-Route::view('/','welcome')->name('apodoinicio');
+/*Route::view('/','welcome')->name('apodoinicio');
 Route::view('/form','formulario')->name('apodoform');
-Route::view('/recuer','recuerdos')->name('apodorecuerdos');
+Route::view('/recuer','recuerdos')->name('apodorecuerdos');*/
