@@ -26,7 +26,7 @@
           Introduce aqui tus memorias...
         </div>
         <div class="card-body">
-            <form method="POST" action="/guardarRecuerdo">
+            <form method="POST" action="/recuerdo">
               @csrf
                 <div class="mb-3">
                   <label class="form-label">Titulo: </label>

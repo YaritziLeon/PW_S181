@@ -3,13 +3,22 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\diarioController;
+use App\Http\Controllers\controllerCrudD;
  
-// Rutas Individuales para Controlador
-Route::get('/', [diarioController::class,'metodoInicio'])->name('apodoinicio');
-Route::get('/form', [diarioController::class,'metodoFormulario'])->name('apodoform');
-Route::get('/recuer', [diarioController::class,'metodoRecuerdos'])->name('apodorecuerdos');
+// Rutas para el controllerCrudD
+Route::get('/recuerdo/create',[controllerCrudD::class,'create'])->name('recuerdo.create');
+Route::post('/recuerdo',[controllerCrudD::class,'store'])->name('recuerdo.store');
+Route::get('/recuerdo',[controllerCrudD::class,'index'])->name('recuerdo.index');
+Route::get('/',[controllerCrudD::class,'inicio'])->name('recuerdo.inicio');
 
-Route::post('/guardarRecuerdo',[diarioController::class,'guardarRecuerdo'])->name('guardar');
+
+// Rutas Individuales para Controlador
+// Rutas para el DiarioController
+//Route::get('/', [diarioController::class,'metodoInicio'])->name('apodoinicio');
+// Route::get('/form', [diarioController::class,'metodoFormulario'])->name('apodoform');
+//Route::get('/recuer', [diarioController::class,'metodoRecuerdos'])->name('apodorecuerdos');
+
+//Route::post('/guardarRecuerdo',[diarioController::class,'guardarRecuerdo'])->name('guardar');
 
 
 

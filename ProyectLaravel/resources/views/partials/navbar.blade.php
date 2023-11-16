@@ -7,24 +7,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {{request()->routeIs('apodoinicio')?'text-danger':''}}" aria-current="page" href="{{route('apodoinicio')}}">Inicio</a>
+            <a class="nav-link {{request()->routeIs('recuerdo.inicio')?'text-primary':''}}" aria-current="page" href="/"><strong>Inicio</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{request()->routeIs('apodoform')?'text-primary':''}}" href="/form">Formulario</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item {{request()->routeIs('apodorecuerdos')?'text-warning':''}}" href="/recuer">Recuerdos</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <a class="nav-link {{request()->routeIs('recuerdo.create')?'text-primary':''}}" href="/recuerdo/create"><strong>Formulario</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link {{request()->routeIs('recuerdo.index')?'text-primary':''}}" href="/recuerdo"><strong>Recuerdos</strong></a>
           </li>
         </ul>
         <form class="d-flex" role="search">
